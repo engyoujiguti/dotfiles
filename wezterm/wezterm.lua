@@ -2,7 +2,9 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.automatically_reload_config = true
-config.font_size = 12.0
+config.color_scheme = "Tokyo Night (Gogh)"
+config.font = nerd_font
+config.font_size = 16.0
 config.use_ime = true
 config.window_background_opacity = 0.85
 config.macos_window_background_blur = 20
@@ -32,6 +34,7 @@ config.window_background_gradient = {
 
 -- タブの追加ボタンを非表示
 config.show_new_tab_button_in_tab_bar = false
+-- nightlyのみ使用可能
 
 -- タブ同士の境界線を非表示
 config.colors = {
@@ -78,3 +81,5 @@ config.key_tables = require("keybinds").key_tables
 config.leader = { key = "q", mods = "CTRL", timeout_milliseconds = 2000 }
 
 return config
+
+
